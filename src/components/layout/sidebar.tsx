@@ -45,13 +45,12 @@ export function Sidebar({ className, }: SidebarProps) {
                         </button>
                     </div>
                     {menu.map((item) => (
-                        <a
+                        <span
                             key={item.href}
-                            href={item.href}
                             className="p-2 rounded hover:bg-gray-700 text-white transition-colors"
                         >
                             {item.label}
-                        </a>
+                        </span>
                     ))}
                 </nav>
             </aside>
