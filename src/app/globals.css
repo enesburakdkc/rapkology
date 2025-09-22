@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-saira: var(--font-saira);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121212;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  @apply select-none font-saira;
+}
+
+#hero .swiper .swiper-wrapper {
+  position: relative !important;
+}
+
+#hero .swiper .swiper-pagination {
+  display: flex !important;
+  gap: 1px !important;
+  position: absolute !important;
+  right: 0 !important;
+  bottom: 115px !important;
+  z-index: 100 !important;
+  justify-content: flex-end !important;
+  transform: translateX(-28vw) !important;
+}
+
+#hero .swiper .swiper-pagination .swiper-pagination-bullet {
+  background: black !important;
+  opacity: 0.7 !important;
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+}
+
+#hero .swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background: #f0e84d !important;
+  scale: 1.3;
+  opacity: 1 !important;
+}
+
+#favorites .swiper {
+  max-width: 100svw !important;
+  min-width: 61rem !important;
+  min-height: 20rem !important;
+  position: relative !important;
+  z-index: 70 !important;
+}
+
+#favorites .swiper .swiper-wrapper {
+}
+
+.swiper-scrollbar {
+  width: 40rem !important;
+  height: 5px !important;
+  position: absolute !important;
+  right: 8rem !important;
+  left: auto !important;
+  background-color: #2a2a2a !important;
+}
+
+.swiper-scrollbar-drag {
+  background: #f0e84d !important;
+}
+
+@media (max-width: 1023px) {
+  #favorites .swiper {
+    max-width: 100svw !important;
+    min-width: 100svw !important;
+  }
+  .swiper-scrollbar {
+    max-width: 20rem !important;
+    right: auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}
+@media (max-width: 767px) {
+  #hero .swiper .swiper-pagination {
+    display: none !important;
+  }
+}
