@@ -48,7 +48,7 @@ export function Hero() {
 
     if (loading) {  // Visible while loading
         return (
-            <div className="h-160 flex items-center justify-center bg-gradient-to-r from-purple-900 to-blue-900">
+            <div className="h-160 flex items-center justify-center">
                 <div className="text-white text-xl">Yükleniyor...</div>
             </div>
         );
