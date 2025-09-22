@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import mockData from "@/data/mockData.json"
 import { Post } from "@/types/post";
-import CustomButton from "../../ui/CustomButton";
+import CustomButton from "../../ui/custom-button";
 
 export function Trends() {
     // Defining variables

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import mockData from "@/data/mockData.json"
 import { Post } from "@/types/post";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import CustomButton from "../../ui/CustomButton";
+import CustomButton from "../../ui/custom-button";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 

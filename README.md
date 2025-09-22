@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📌 Codezone Study Case
 
-## Getting Started
+Bu proje, Codezone tarafından gönderilen vaka çalışması için geliştirilmiştir.  
+Amaç, gönderilen **Figma tasarımına** olabildiğince yakın, **Next.js 15** tabanlı, **full responsive** bir arayüz oluşturmaktır.
 
-First, run the development server:
+## 🚀 Deploy Linkleri
+
+- **Live Demo (Vercel):** [https://rapkology-blond.vercel.app/](https://rapkology-blond.vercel.app/)
+- **GitHub Repository:** [https://github.com/enesburakdkc/rapkology](https://github.com/enesburakdkc/rapkology)
+
+---
+
+## ⚙️ Kullanılan Teknolojiler
+
+- **Next.js 15** → App Router ile SSR destekli
+- **React 18** → Bileşen tabanlı yapı
+- **Tailwind CSS** → Hızlı ve esnek stil tanımlamaları
+- **Swiper.js** → Slider/Carousel işlevleri (Hero ve Favorites bileşenlerinde)
+
+---
+
+## 📂 Proje Yapısı
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+/src
+ ├─ /app
+ │   ├─ favicon.ico
+ │   ├─ global.css
+ │   ├─ layout.tsx
+ │   └─ page.tsx
+ │
+ ├─ /components
+ │   ├─ /layout
+ │   │   ├─ header.tsx
+ │   │   ├─ main.tsx
+ │   │   └─ sidebar.tsx
+ │   │
+ │   ├─ /pages
+ │   │   └─ /home
+ │   │       ├─ explore.tsx
+ │   │       ├─ favorites.tsx
+ │   │       ├─ hero.tsx
+ │   │       ├─ trends.tsx
+ │   │       └─ twitch.tsx
+ │   │
+ │   └─ /ui
+ │       └─ custom-button
+ │
+ ├─ /context
+ │   └─ sidebar-context.tsx
+ │
+ ├─ /data
+ │   └─ mockData.json
+ │
+ └─ /types
+     └─ post.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔑 Teknik Kararlar & Gerekçeler
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Swiper Kullanımı**
 
-## Learn More
+   - Figma’da slider alanları olduğu için `Hero` ve `Favorites` bileşenlerinde **Swiper Kütüphanesi** kullanıldı.
+   - Hem masaüstü hem mobil için responsive yapı sağlandı.
 
-To learn more about Next.js, take a look at the following resources:
+2. **Mock Data Sorunları**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   - Gönderilen **mockData** ile **Figma tasarımı** birebir örtüşmedi.
+   - Örneğin:
+     - **Favorites bileşeninde** “Ayın Favorileri” alanında kullanılması gereken görseller olmadığı için o alanı yapmam mümkün olmadı.
+     - Bazı görseller, başlıklar ve içerik yapıları Figma’daki ile eşleşmedi.
+   - Bu nedenle, mock veriler üzerinden en uygun eşleştirmeler yapıldı ve tasarıma en yakın çözüm sunuldu.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Responsive Tasarım**
 
-## Deploy on Vercel
+   - Tailwind’in `sm`, `md`, `lg`, `xl` gibi breakpoint’leri kullanılarak mobil/masaüstü uyumlu yapı sağlandı.
+   - Figma’daki grid sistemine olabildiğince bağlı kalındı.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Geliştirici Deneyimi**
+   - Proje kolay okunabilir ve sürdürülebilir olması için bileşen bazlı modüler yapıda geliştirildi.
+   - Olabildiğince açıklayıcı yorum satırları eklendi.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📌 Kurulum & Çalıştırma
+
+```bash
+# Projeyi klonla
+git clone https://github.com/enesburakdkc/rapkology
+
+# Dizine gir
+cd rapkology
+
+# Bağımlılıkları yükle
+pnpm install
+
+# Geliştirme sunucusunu çalıştır
+pnpm dev
+```
